@@ -1,0 +1,24 @@
+{
+  "name": "emoji-to-html",
+  "version": "1.0.0",
+  "description": "utility to search and get unicode to html",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/trinidadpy/emoji-to-html.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/trinidadpy/emoji-to-html/issues"
+  },
+  "homepage": "https://gitlab.com/trinidadpy/emoji-to-html#README",
+  "dependencies": {
+    "bootstrap": "^4.1.2",
+    "emoji.json": "^11.0.0",
+    "jquery": "^3.3.1"
+  }
+}
