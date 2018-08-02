@@ -40,7 +40,7 @@ function buscarEmoji() {
     var groupedByDate = {};
     if (searchTerm) {
         $.each(emojis, function (index, field) {
-            if (containsIgnoreCase(field.keywords, searchTerm)) {
+            if (containsIgnoreCase(field.keywords, searchTerm) || containscode(field.code, searchTerm)) {
                 $("#emojiContainer").append('<button style="float:left; margin:5px" type="button" class="btn btn-light"  onclick="setToCopy(\'' + field.code+ '\')">' + field.char + " " + '</button>');
             }
         });
@@ -55,6 +55,12 @@ function buscarEmoji() {
 
 function containsIgnoreCase(src, value) {
     return (src.toUpperCase()).indexOf(value.toUpperCase()) != -1;
+}
+
+function containscode(src, value) {
+    var code = "&#x"+src;
+    console.log(code);
+    return (code.toUpperCase()).indexOf(value.toUpperCase()) != -1;
 }
 
 function setToCopy(code) {
