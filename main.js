@@ -78,7 +78,7 @@ function setToCopy(code) {
 
     $("#resultContainer").append(newArray[0].char);
     $("#resultCodeContainer").append(lastValue+"&#x"+newArray[0].code.replace(/\s/g, "&#x"));
-      //  $("#resultContainerLink").append("<li><a href='"+linkname+"'>https://emojipedia.org/"+newArray[0].name.split(' ').join('-').toLowerCase()+"/</a></li>");
-	$("#resultContainerLink").append("<li onclick='window.open('"+linkname+"', '_blank')'><a>"+linkname+"</a></li>");
+        $("#resultContainerLink").append("<li><a href='"+linkname+"' target='_blank'>https://emojipedia.org/"+newArray[0].name.split(' ').join('-').toLowerCase()+"/</a></li>");
+	//$("#resultContainerLink").append("<li onclick='window.open('"+linkname+"', '_blank')'><a>"+linkname+"</a></li>");
 
 }
