@@ -69,9 +69,11 @@ function setToCopy(code) {
     var newArray = emojis.filter(function (el) {
 		return code == el.code
     });
-    var lastValue =$("#resultCodeContainer").val()
+    var lastValue =$("#resultCodeContainer").val();
+    var linkname="https://emojipedia.org/"+newArray[0].name.split(' ').join('-').toLowerCase();
+
     $("#resultContainer").append(newArray[0].char);
     $("#resultCodeContainer").append(lastValue+"&#x"+newArray[0].code.replace(/\s/g, "&#x"));
-        $("#resultContainerLink").append("https://emojipedia.org/"+newArray[0].name.split(' ').join('-').toLowerCase()+"/");
+        $("#resultContainerLink").append("<li><a href='"+linkname+"'>https://emojipedia.org/"+newArray[0].name.split(' ').join('-').toLowerCase()+"/</a></li>");
 
 }
