@@ -28,6 +28,7 @@ $(function () {
     }); 
     $("#cleanField").on('click', function () {
         $("#resultContainer").empty();
+	$("#resultContainerLink").empty();	    
         $("#resultCodeContainer").empty();
     });    
       
@@ -71,5 +72,6 @@ function setToCopy(code) {
     var lastValue =$("#resultCodeContainer").val()
     $("#resultContainer").append(newArray[0].char);
     $("#resultCodeContainer").append(lastValue+"&#x"+newArray[0].code.replace(/\s/g, "&#x"));
-    
+        $("#resultContainerLink").append("https://emojipedia.org/"+newArray[0].name.split(' ').join('-').toLowerCase()+"/");
+
 }
