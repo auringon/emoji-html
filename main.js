@@ -71,6 +71,10 @@ function setToCopy(code) {
     });
     var lastValue =$("#resultCodeContainer").val();
     var linkname="https://emojipedia.org/"+newArray[0].name.split(' ').join('-').toLowerCase();
+	try{
+		linkname= linkname.split("\n≊")[0];
+	}catch(e){
+	}
 
     $("#resultContainer").append(newArray[0].char);
     $("#resultCodeContainer").append(lastValue+"&#x"+newArray[0].code.replace(/\s/g, "&#x"));
